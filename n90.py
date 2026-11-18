@@ -133,6 +133,12 @@ def judge_with_n90(case):
     from judge import judge
     out = judge(case)
     out["n90"] = n90_view(out)
+    try:
+        from n90_principles import check_principles
+        out["n90_principles"] = check_principles(case)
+    except ImportError:
+        out["n90_principles"] = {"_meta": {"kind": "material_completeness", "not_a_verdict": True,
+                                          "note": "未安装 n90_principles 模块，本次不检查材料完备度"}}
     return out
 
 
