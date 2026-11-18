@@ -1,0 +1,10 @@
+{
+  "file": "openfda_510k_software.json",
+  "sha256": "020fdfc000477afd17a8b47b787855cdfaf54de6d4ce281bdfe2b02a4dcacc38",
+  "record_count": 300,
+  "query": "device_name:\"software\"",
+  "limit": 300,
+  "fetched_at_utc": "2026-11-18T09:26:18Z",
+  "source": "https://api.fda.gov/device/510k.json",
+  "note": "记录未经加工；哈希为 records 数组的规范化 JSON（sort_keys + indent=2）"
+}
