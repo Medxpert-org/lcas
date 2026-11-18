@@ -1,0 +1,407 @@
+{
+  "_note": "Real FDA 510(k) modification submissions. Consequence label: this change DID require a submission.",
+  "_source": "https://open.fda.gov/apis/device/510k/",
+  "_query": "clearance_type:\"Special\" AND device_name:software",
+  "records": [
+    {
+      "k_number": "K003621",
+      "decision_date": "2000-12-20",
+      "clearance_type": "Special",
+      "device_name": "ST/AR ST AND ARRHYTHMIA SOFTWARE, MODEL RELEASE D.0",
+      "applicant": "Agilent Technologies, Inc.",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K010784",
+      "decision_date": "2001-04-10",
+      "clearance_type": "Special",
+      "device_name": "PLATO SRS STEREOTACTIC RADIOSURGERY PLANNING SYSTEM,MODEL 2.0, PLATO IFS IMAGE FUSION SOFTWARE, MODEL 2.1",
+      "applicant": "Nucletron Corp.",
+      "product_code": "MUJ"
+    },
+    {
+      "k_number": "K011093",
+      "decision_date": "2001-05-01",
+      "clearance_type": "Special",
+      "device_name": "AGILENT INFORMATION CENTER SOFTWARE FOR M3150,M3151,M3153 AND M3154",
+      "applicant": "Agilent Technologies, Inc.",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K013311",
+      "decision_date": "2002-01-03",
+      "clearance_type": "Special",
+      "device_name": "MODIFICATION TO: POCKETVIEW ECG SOFTWARE",
+      "applicant": "Micromedical Industries, Ltd.",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K013943",
+      "decision_date": "2001-12-18",
+      "clearance_type": "Special",
+      "device_name": "RADIANALYZER, MODEL 12710, RADIVIEW (PC-SOFTWARE ACCESSORY), MODEL 12720",
+      "applicant": "Radi Medical Systems AB",
+      "product_code": "DSK"
+    },
+    {
+      "k_number": "K014139",
+      "decision_date": "2002-03-21",
+      "clearance_type": "Special",
+      "device_name": "DIABETES ASSISTANT SOFTWARE",
+      "applicant": "Roche Diagnostics Corp.",
+      "product_code": "CGA"
+    },
+    {
+      "k_number": "K014261",
+      "decision_date": "2002-02-12",
+      "clearance_type": "Special",
+      "device_name": "ST/AR ST AND ARRHYTHMIA SOFTWARE, MODEL RELEASE E.0",
+      "applicant": "Philips Medical Systems, Inc.",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K021422",
+      "decision_date": "2002-05-15",
+      "clearance_type": "Special",
+      "device_name": "PHILIPS INFORMATION CENTER SOFTWARE REVISION D.02",
+      "applicant": "Philips Medical Systems",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K023124",
+      "decision_date": "2002-10-04",
+      "clearance_type": "Special",
+      "device_name": "CANON X-RAY DIGITAL CAMERA WITH ADDITIONAL SOFTWARE, LANMIX MLT",
+      "applicant": "Canon, Inc.",
+      "product_code": "MQB"
+    },
+    {
+      "k_number": "K023497",
+      "decision_date": "2002-11-04",
+      "clearance_type": "Special",
+      "device_name": "DATEX-OHMEDA S/5 WEB VIEWER WITH L-6WV02 SOFTWARE",
+      "applicant": "Datex-Ohmeda",
+      "product_code": "MSX"
+    },
+    {
+      "k_number": "K030106",
+      "decision_date": "2003-02-12",
+      "clearance_type": "Special",
+      "device_name": "STEALTHSTATION SYSTEM ADVANCED CONTOUR REGISTRATION SOFTWARE MODULE",
+      "applicant": "Medtronic Surgical Navigation Technologies",
+      "product_code": "HAW"
+    },
+    {
+      "k_number": "K033624",
+      "decision_date": "2003-12-15",
+      "clearance_type": "Special",
+      "device_name": "PACS SOFTWARE SOLUTION 2003",
+      "applicant": "Canon USA, Inc.",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K040852",
+      "decision_date": "2004-04-23",
+      "clearance_type": "Special",
+      "device_name": "PREVIEW TREATMENT PLANNING SOFTWARE",
+      "applicant": "Medical Media Systems, Inc.",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K041494",
+      "decision_date": "2004-07-01",
+      "clearance_type": "Special",
+      "device_name": "OLYMPUS INTEGRATED ENDOSURGERY SYSTEM ENDOALPHA (CONTROL UNIT FOR ENDOSURGERY UCES-2) SOFTWARE VERSION 2",
+      "applicant": "Olympus Corporation",
+      "product_code": "FET"
+    },
+    {
+      "k_number": "K041741",
+      "decision_date": "2004-07-21",
+      "clearance_type": "Special",
+      "device_name": "M3290A INTELLIVUE INFORMATION CENTER SOFTWARE RELEASE F.0 AND M4840A PHILIPS TELEMETRY SYSTEM II INCLUDING M4841A PATIEN",
+      "applicant": "Philips Medical Systems, Inc.",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K060137",
+      "decision_date": "2006-03-16",
+      "clearance_type": "Special",
+      "device_name": "KODAK ECLIPSE IMAGE PROCESSING SOFTWARE",
+      "applicant": "Eastman Kodak Company",
+      "product_code": "MQB"
+    },
+    {
+      "k_number": "K061185",
+      "decision_date": "2006-05-15",
+      "clearance_type": "Special",
+      "device_name": "DATEX-OHMEDA S/5 COMPACT ANESTHESIA MONITOR WITH L-CANE05A AND L-CANE05A SOFTWARE",
+      "applicant": "GE Healthcare",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K063493",
+      "decision_date": "2006-12-21",
+      "clearance_type": "Special",
+      "device_name": "I REVIEW SOFTWARE(ACCESSORY TO) ILAB ULTRASOUND IMAGING SYSTEM) VERSION1.0",
+      "applicant": "Boston Scientific Corp",
+      "product_code": "IYN"
+    },
+    {
+      "k_number": "K070260",
+      "decision_date": "2007-02-23",
+      "clearance_type": "Special",
+      "device_name": "STAR ST AND ARRHYTHMIA SOFTWARE, RELEASE H.0",
+      "applicant": "Philips Medical Systems",
+      "product_code": "DSI"
+    },
+    {
+      "k_number": "K082595",
+      "decision_date": "2008-10-28",
+      "clearance_type": "Special",
+      "device_name": "MODIFICATION TO:ACCU-CHEK POCKET COMPASS DIABETES MANAGEMENT SOFTWARE",
+      "applicant": "Roche Diagnostics",
+      "product_code": "LZG"
+    },
+    {
+      "k_number": "K083565",
+      "decision_date": "2009-02-20",
+      "clearance_type": "Special",
+      "device_name": "PIGALILEO TOTAL HIP REPLACEMENT (THR) SOFTWARE APPLICATION V3.0",
+      "applicant": "Smith & Nephew, Inc.",
+      "product_code": "HAW"
+    },
+    {
+      "k_number": "K102495",
+      "decision_date": "2010-09-30",
+      "clearance_type": "Special",
+      "device_name": "M3290B INTELLIVUE INFORMATION CENTER SOFTWARE, RELEASE A.0",
+      "applicant": "Philips Medical Systems",
+      "product_code": "MHX"
+    },
+    {
+      "k_number": "K110361",
+      "decision_date": "2011-03-08",
+      "clearance_type": "Special",
+      "device_name": "ZOLL R SERIES WITH 2010 AHA GUIDELINES SOFTWARE UPDATE",
+      "applicant": "Zoll Medical Corporation, World Wide Headquarters",
+      "product_code": "MKJ"
+    },
+    {
+      "k_number": "K110948",
+      "decision_date": "2011-05-13",
+      "clearance_type": "Special",
+      "device_name": "HEALTH CARE SYSTEM SOFTWARE",
+      "applicant": "Taidoc Technology Corporation",
+      "product_code": "NBW"
+    },
+    {
+      "k_number": "K111487",
+      "decision_date": "2011-11-10",
+      "clearance_type": "Special",
+      "device_name": "NH-301 AMBULATORY ECG ANALYSIS SOFTWARE",
+      "applicant": "Norav Medical Corp.",
+      "product_code": "MLO"
+    },
+    {
+      "k_number": "K112474",
+      "decision_date": "2011-09-23",
+      "clearance_type": "Special",
+      "device_name": "CSMC CARDIAC SUITE- NUCLEAR MEDICINE SOFTWARE",
+      "applicant": "Cedars-Sinai Medical Center",
+      "product_code": "KPS"
+    },
+    {
+      "k_number": "K130860",
+      "decision_date": "2013-04-25",
+      "clearance_type": "Special",
+      "device_name": "VARIANT II HEMOGLOBIN A1C PROGRAM (NEW), VARIANT II HEMOGLOBIN TESTING SYSTEM WITH CDM SOFTWARE, CDM SOFTWARE",
+      "applicant": "Bio-Rad Laboratories, Inc., Clinical Systems Divis",
+      "product_code": "LCP"
+    },
+    {
+      "k_number": "K131469",
+      "decision_date": "2014-01-06",
+      "clearance_type": "Special",
+      "device_name": "ACON ON CALL DIABETES MANAGEMENT SOFTWARE",
+      "applicant": "ACON Laboratories, Inc.",
+      "product_code": "NBW"
+    },
+    {
+      "k_number": "K133346",
+      "decision_date": "2013-12-19",
+      "clearance_type": "Special",
+      "device_name": "SMARTLOG DIABETES MANAGEMENT SOFTWARE",
+      "applicant": "I-Sens, Inc.",
+      "product_code": "NBW"
+    },
+    {
+      "k_number": "K141185",
+      "decision_date": "2014-06-06",
+      "clearance_type": "Special",
+      "device_name": "V2.7 SOFTWARE FOR THE LABSYSTEM PRO EP RECORDING SYSTEM",
+      "applicant": "Boston Scientific Corp",
+      "product_code": "DQK"
+    },
+    {
+      "k_number": "K141220",
+      "decision_date": "2014-05-22",
+      "clearance_type": "Special",
+      "device_name": "APPLIED BIOSYSTEMS 7500 FAST DX REAL-TIME PCR INSTRUMENT WITH SDS SOFTWARE",
+      "applicant": "Thermo Fisher Scientific (Life Technologies Holdin",
+      "product_code": "NSU"
+    },
+    {
+      "k_number": "K141652",
+      "decision_date": "2014-07-22",
+      "clearance_type": "Special",
+      "device_name": "CEDARS-SINAI CARDIAC SUITE NUCLEAR MEDICINE SOFTWARE",
+      "applicant": "Cedars-Sinai Medical Center",
+      "product_code": "KPS"
+    },
+    {
+      "k_number": "K143122",
+      "decision_date": "2015-02-20",
+      "clearance_type": "Special",
+      "device_name": "Volcano iFR Harvest Software (Offline)",
+      "applicant": "Volcano Corporation",
+      "product_code": "IYO"
+    },
+    {
+      "k_number": "K150258",
+      "decision_date": "2015-03-05",
+      "clearance_type": "Special",
+      "device_name": "Vitrea, Version 7.0 Medical Image Processing Software",
+      "applicant": "Vital Images, Inc.",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K151929",
+      "decision_date": "2015-08-12",
+      "clearance_type": "Special",
+      "device_name": "PERSYST 13 (P13) EEG REVIEW AND ANALYSIS SOFTWARE",
+      "applicant": "Persyst Development Corporation",
+      "product_code": "OMB"
+    },
+    {
+      "k_number": "K160579",
+      "decision_date": "2016-04-08",
+      "clearance_type": "Special",
+      "device_name": "Xmaru View V1 and Xmaru PACS, Medical Image Processing Software",
+      "applicant": "Rayence Co., Ltd.",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K161444",
+      "decision_date": "2016-06-21",
+      "clearance_type": "Special",
+      "device_name": "DBSWIN and VistaEasy Imaging Software",
+      "applicant": "Duerr Dental AG",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K170677",
+      "decision_date": "2017-04-05",
+      "clearance_type": "Special",
+      "device_name": "Neurovision Nerve Locator Monitor (Nerveana), EMGView Software",
+      "applicant": "Neurovision Medical Product, Inc.",
+      "product_code": "GWF"
+    },
+    {
+      "k_number": "K171664",
+      "decision_date": "2017-09-13",
+      "clearance_type": "Special",
+      "device_name": "Hemoglobin Variants System on Newborn Hemoglobin System with GDM and HbReview Software",
+      "applicant": "Bio-Rad Laboratories, Inc.",
+      "product_code": "GKA"
+    },
+    {
+      "k_number": "K173028",
+      "decision_date": "2018-06-21",
+      "clearance_type": "Special",
+      "device_name": "BPro BT Ambulatory Blood Pressure Monitoring System with BProSoft BT PC Software",
+      "applicant": "Healthstats International Pte. , Ltd.",
+      "product_code": "DXN"
+    },
+    {
+      "k_number": "K173597",
+      "decision_date": "2018-04-04",
+      "clearance_type": "Special",
+      "device_name": "Scenium VE20 Software",
+      "applicant": "Siemens Medical Solutions USA, Inc.",
+      "product_code": "LLZ"
+    },
+    {
+      "k_number": "K183030",
+      "decision_date": "2018-11-30",
+      "clearance_type": "Special",
+      "device_name": "xTAG Gastrointestinal Pathogen Panel (GPP), xTAG Data Analysis Software (TDAS GPP)",
+      "applicant": "Luminex Molecular Diagnostics, Inc.",
+      "product_code": "PCH"
+    },
+    {
+      "k_number": "K191160",
+      "decision_date": "2019-11-04",
+      "clearance_type": "Special",
+      "device_name": "xTAG Gastrointestinal Pathogen Panel (GPP), xTAG Data Analysis Software (TDAS GPP)",
+      "applicant": "Luminex Molecular Diagnostics, Inc.",
+      "product_code": "PCH"
+    },
+    {
+      "k_number": "K193381",
+      "decision_date": "2019-12-31",
+      "clearance_type": "Special",
+      "device_name": "RadCalc Software",
+      "applicant": "Lifeline Software, Inc.",
+      "product_code": "MUJ"
+    },
+    {
+      "k_number": "K203639",
+      "decision_date": "2021-01-13",
+      "clearance_type": "Special",
+      "device_name": "StealthStation Cranial Software v1.3.2",
+      "applicant": "Medtronic Navigation, Inc.",
+      "product_code": "HAW"
+    },
+    {
+      "k_number": "K210053",
+      "decision_date": "2021-02-05",
+      "clearance_type": "Special",
+      "device_name": "LVivo Software Application",
+      "applicant": "Dia Imaging Analysis, Ltd.",
+      "product_code": "QIH"
+    },
+    {
+      "k_number": "K240553",
+      "decision_date": "2024-10-04",
+      "clearance_type": "Special",
+      "device_name": "LVivo Software Application",
+      "applicant": "Dia Imaging Analysis, Ltd.",
+      "product_code": "QIH"
+    },
+    {
+      "k_number": "K243540",
+      "decision_date": "2024-12-12",
+      "clearance_type": "Special",
+      "device_name": "Mac-Lab (AltiX AI.i); CardioLab (AltiX AI.i); ComboLab (AltiX AI.i); MLCL Client Software (AltiX AI.i)",
+      "applicant": "Ge Medical Systems Information Technologies, Inc.",
+      "product_code": "DQK"
+    },
+    {
+      "k_number": "K251463",
+      "decision_date": "2025-09-04",
+      "clearance_type": "Special",
+      "device_name": "EnSite X EP System, AutoMark Index Software License (ENSITE-AMI-01); EnSite X EP System, AutoMark Index Temporary Software License (ENSITE-D-AMI-01)",
+      "applicant": "ABBOTT MEDICAL",
+      "product_code": "DQK"
+    },
+    {
+      "k_number": "K993907",
+      "decision_date": "1999-12-06",
+      "clearance_type": "Special",
+      "device_name": "VIRIDIA INFORMATION CENTER SOFTWARE FOR M3154A OPT C22",
+      "applicant": "Agilent Technologies, Inc.",
+      "product_code": "MHD"
+    }
+  ]
+}
