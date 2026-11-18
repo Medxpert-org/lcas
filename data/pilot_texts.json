@@ -1,0 +1,26 @@
+[
+  {
+    "k_number": "K132338",
+    "url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/K132338.pdf",
+    "clearance_type": "Special",
+    "excerpt": "SPECIAL 510(k): Device Modification ODE Review Memorandum. Submitter's statement that the INDICATION/INTENDED USE of the modified device as described in its labeling HAS NOT CHANGED along with the proposed labeling. A description of the device MODIFICATION(S) ... This change was for software modification to add USB-based data transmission from the DA01 blood glucose meter to the DiaLife Mini Management Software. The labeling for this modified subject device has been reviewed to verify that the indication/intended use for the device is unaffected by the modification. In addition, the submitter's description of the particular modification(s) ... demonstrate that the fundamental scientific technology has not changed. The submitter has provided the design control information as specified in The New 510(k) Paradigm."
+  },
+  {
+    "k_number": "K240553",
+    "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240553.pdf",
+    "clearance_type": "Traditional",
+    "excerpt": "Comparison of Technological Characteristics: LVivo PLAX extends the current toolbox of the LVivo platform, providing automated calculation of LV size and function parameters from the PLAX view. Indication for Use: same. Algorithm: Added Support for PLAX view. A summary of the Performance Evaluation ... demonstrated conformity to the intended use. Acceptance criteria for Fractional Shortening (FS): correlation >=75% vs manual measurements. Results: the primary end point was met. The intended use and the technological characteristics in the current device are the same as those in the predicate device. Likewise, the modifications do not affect the safety and effectiveness of the device. The performance tests have been completed and successfully verify the validated performance of the subject device."
+  },
+  {
+    "k_number": "K243540",
+    "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243540.pdf",
+    "clearance_type": "Special",
+    "excerpt": "The primary changes are related to the introduction of a new version of the EP amplifier, updates to signal filtering and gain, inclusion of opSens/HAEMONETICS Diastolic Pressure Ratio (dPR), introduction of PruckaStream. Technology: employ the same fundamental scientific technology, basic design, construction, materials, energy source, control mechanism, and operating principles as the predicate devices. The changes ... do not create a new Intended Use and represent similar technological characteristics, with no impact on the control mechanisms, operating principle, and energy type. GE HealthCare's quality system's design verification, and risk management processes did not identify any new questions of safety or effectiveness, hazards, unexpected results, or adverse effects stemming from the changes to the predicate."
+  },
+  {
+    "k_number": "K251463",
+    "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251463.pdf",
+    "clearance_type": "Special",
+    "excerpt": "Predicate Comparison: the subject device and the predicate EnSite X v3.1 have the same intended use and indications for use. They use the same fundamental scientific technology to facilitate catheter position and orientation, as well as cardiac mapping and model creation. There were no changes to the hardware. The subject device adds a software license which implements the new feature, AutoMark Index. All risks were mitigated to acceptable levels. No new questions of safety or effectiveness were raised. Design verification activities were performed and met their respective acceptance criteria to ensure that the devices in scope of this submission are substantially equivalent to the predicate device."
+  }
+]
