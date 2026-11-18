@@ -41,6 +41,25 @@ def _in_scope_type(c):
     return _ch(c).get("type") in types
 
 
+BOUNDARY_FLAGS = ("architecture_change", "new_input_modality", "new_output")
+
+
+def _crossed_boundaries(c):
+    """本次改动触达了哪些边界项（架构 / 输入模态 / 输出）。"""
+    return [k for k in BOUNDARY_FLAGS if _ch(c).get(k)]
+
+
+def _unauthorized_boundaries(c):
+    """触达但**未被 PCCP 逐项授权**的边界项。
+
+    2026-11-18 修正（真实材料回放发现误拦）：边界授权是逐项的——
+    K252041 的 PCCP 明确授权"模型架构修改 + 辅助输入"，但 US-02 只授权"重训"却改了输入模态。
+    因此不得用"触达即越界"，也不得用"类型在范围内即放行"，必须看 device.pccp_authorized。
+    """
+    authorized = set(_dv(c).get("pccp_authorized") or [])
+    return [k for k in _crossed_boundaries(c) if k not in authorized]
+
+
 # ---------------------------------------------------------------- 规则表
 # effect: OUT_OF_SCOPE / BLOCK / NOT_REQUIRED / IN_SCOPE
 RULES = [
@@ -59,9 +78,8 @@ RULES = [
          test=lambda c: bool(_dv(c).get("has_pccp")) and not _in_scope_type(c)),
     dict(id="US-PCCP-R3", jur="US", effect="OUT_OF_SCOPE",
          article="FDA PCCP Guidance §VI（范围界定）+ §VII",
-         desc="改动越过 PCCP 声明边界（架构/输入模态/输出改变）→ 超范围",
-         test=lambda c: bool(_dv(c).get("has_pccp")) and any(
-             _ch(c).get(k) for k in ("architecture_change", "new_input_modality", "new_output"))),
+         desc="触达未被 PCCP 逐项授权的边界项（架构/输入模态/输出）→ 越界",
+         test=lambda c: bool(_dv(c).get("has_pccp")) and bool(_unauthorized_boundaries(c))),
     dict(id="US-PCCP-R4", jur="US", effect="BLOCK",
          article="FDA PCCP Guidance §VII Modification Protocol（预定义接受准则）",
          desc="落在 PCCP 范围内，但验证未完成或未达接受准则 → 不可实施，先补验证",
@@ -84,7 +102,7 @@ RULES = [
          desc="在已授权 PCCP 范围内且验证与接受准则均已满足 → 可依 PCCP 实施",
          test=lambda c: bool(_dv(c).get("has_pccp")) and _in_scope_type(c)
          and bool(_ch(c).get("validation_performed")) and bool(_ch(c).get("acceptance_met"))
-         and not any(_ch(c).get(k) for k in ("architecture_change", "new_input_modality", "new_output"))),
+         and not _unauthorized_boundaries(c)),
 
     # ---------------- 中国：算法锁定 + 重大/轻微软件更新
     dict(id="CN-AI-LOCK", jur="CN", effect="OUT_OF_SCOPE",
