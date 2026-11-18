@@ -43,5 +43,21 @@ python -m unittest tests.test_openfda_freeze      # CI 里跑，改文件不改 
 
 - 源：`https://api.fda.gov/device/510k.json`
 - 分页：`limit≤100`、`skip` 递增、每页间隔 200 ms，不对上游施压
-- 哈希口径：`records` 数组的规范化 JSON（`sort_keys=True, indent=2`），UTF-8
+- 哈希口径：`records` 数组的规范化 JSON（`sort_keys=True, indent=2)`，UTF-8
 - 只存登记字段，不加工、不推断、不合并
+
+## 访问矩阵（2026-11-18 实测，用于说明"为什么还没做 PDF 回放"）
+
+| 目标 | 结果 | 说明 |
+|---|---|---|
+| `api.fda.gov/device/510k.json` | **通** | 300 条冻结即由此取得 |
+| `www.fda.gov` 首页 | **404** | 整域被拦截，HEAD 与 GET 均 404 |
+| `www.accessdata.fda.gov/.../K*.pdf` | **404** | 三种路径形态（`pdf/`、`pdf8/`、`pdf24/`）全部 404 |
+| `www.accessdata.fda.gov/scripts/cdrh/...pmn.cfm` | **404** | 510(k) 详情页同样不可达 |
+
+结论：**summary PDF 在本执行环境取不到**，因此"真实 PCCP 回放"不是没做，是**通路未开**。
+一旦通路可用，流程已写在上一节，两步都可脚本化 + 人工编码，不需要改判定器。
+
+替代通路（尚未验证，列出供下一步）：FDA 510(k) 数据库镜像站、厂商官网公开的 510(k) Summary、
+第三方法规数据库；任一通路可用时，本仓的抓取脚本只需换 base URL 与路径模板。
+
