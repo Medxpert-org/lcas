@@ -54,29 +54,40 @@ def _get(case, path):
 def check_principles(case):
     out = {}
     missing_all = []
+    provenance = case.get("_material_source")     # "derived" 时，值来自系统推导而非申报方声明
     for p, fields in PRINCIPLE_FIELDS.items():
         missing = []
         for path, label in fields:
             v = _get(case, path)
             if v in (None, "", [], {}):
                 missing.append({"field": path, "label": label})
-        out[p] = {"status": "PASS" if not missing else "MISSING", "missing": missing}
+        if missing:
+            status = "MISSING"
+        elif provenance == "derived":
+            status = "PASS_DERIVED"
+        else:
+            status = "PASS"
+        out[p] = {"status": status, "missing": missing}
         missing_all += [{"principle": p, **m} for m in missing]
 
     out["_meta"] = {
         "kind": "material_completeness",
         "not_a_verdict": True,
         "note": ("本检查只看材料是否具备，不看内容是否正确；缺失不等于违规，齐备也不等于合规。"
-                 "字段由申报方自填，系统不校验真伪。"),
+                 "字段由申报方自填，系统不校验真伪。PASS_DERIVED 表示该字段由案例既有字段"
+                 "机械推导（见 _material_trace），不是申报方声明。"),
+        "provenance": provenance or "declared",
         "missing_total": len(missing_all),
     }
     return out
 
 
 def summary(view):
-    """给一行结论用：哪些原则缺材料。"""
+    """给一行结论用：哪些原则缺材料；派生通过单独计数，不混进 PASS。"""
     bad = [p for p, v in view.items() if isinstance(v, dict) and v.get("status") == "MISSING"]
-    return {"missing_principles": bad, "complete": not bad}
+    derived = [p for p, v in view.items() if isinstance(v, dict) and v.get("status") == "PASS_DERIVED"]
+    return {"missing_principles": bad, "derived_principles": derived,
+            "complete_declared": not bad and not derived}
 
 
 def main(argv):

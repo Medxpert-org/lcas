@@ -29,7 +29,7 @@ class Principles(unittest.TestCase):
 
     def test_all_present(self):
         v = np90.check_principles(full_case())
-        self.assertTrue(np90.summary(v)["complete"])
+        self.assertTrue(np90.summary(v)["complete_declared"])
 
     def test_missing_is_per_principle(self):
         c = full_case()
@@ -37,7 +37,7 @@ class Principles(unittest.TestCase):
         v = np90.check_principles(c)
         self.assertEqual(v["tpl"]["status"], "MISSING")
         self.assertEqual(v["risk_based"]["status"], "PASS", "其他原则不应连带变 MISSING")
-        self.assertEqual(np90.summary(v)["missing_principles"], ["tpl"])
+        self.assertEqual(np90.summary(v)["missing_principles"], ["tpl"]); self.assertEqual(np90.summary(v)["derived_principles"], [])
 
     def test_meta_denies_compliance(self):
         v = np90.check_principles(full_case())
