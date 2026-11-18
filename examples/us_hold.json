@@ -1,0 +1,8 @@
+{
+  "id": "DEMO-HOLD",
+  "jurisdictions": ["US"],
+  "device": {"name": "肺结节辅助检测软件", "pathway": "510(k)", "has_pccp": true,
+             "pccp_scope_types": ["model_retrain"]},
+  "change": {"type": "model_retrain", "description": "范围内重训，验证尚未完成",
+             "validation_performed": false, "acceptance_met": false}
+}

@@ -1,0 +1,32 @@
+{
+  "id": "DEMO-01",
+  "jurisdictions": ["US", "CN", "EU"],
+  "device": {
+    "name": "肺结节辅助检测软件（演示）",
+    "pathway": "510(k) + NMPA 三类 + MDR",
+    "has_pccp": true,
+    "pccp_scope_types": ["model_retrain"]
+  },
+  "change": {
+    "type": "model_retrain",
+    "description": "按已授权 PCCP 做季度重训，架构不变、预期用途不变，验证与接受准则均已满足",
+    "new_intended_use": false,
+    "architecture_change": false,
+    "new_input_modality": false,
+    "new_output": false,
+    "algorithm_driven": false,
+    "data_driven": true,
+    "online_learning": false,
+    "cybersecurity_only": false,
+    "return_to_spec": false,
+    "introduces_new_risk": false,
+    "risk_control_exists": true,
+    "significant": true,
+    "perf_significant_diff": false,
+    "core_algo_unchanged": true,
+    "perf_optimization_only": false,
+    "validation_performed": true,
+    "acceptance_met": true,
+    "predetermined_documented": true
+  }
+}

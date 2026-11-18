@@ -1,0 +1,8 @@
+{
+  "id": "DEMO-GO",
+  "jurisdictions": ["US"],
+  "device": {"name": "肺结节辅助检测软件", "pathway": "510(k)", "has_pccp": true,
+             "pccp_scope_types": ["model_retrain"]},
+  "change": {"type": "model_retrain", "description": "按已授权 PCCP 完成季度重训，验证与接受准则达标",
+             "validation_performed": true, "acceptance_met": true, "significant": false}
+}

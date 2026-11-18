@@ -1,0 +1,32 @@
+name: lcas-conformance
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Regression + evidence packs
+        run: python bench.py
+
+      - name: Invariants (exhaustive)
+        run: python fuzz.py
+
+      - name: LCAS conformance (L2)
+        run: python release/conformance.py --impl judge.py --check-evidence
+
+      - name: Engine integration (expect exit 2 = reject)
+        run: |
+          python -c "from lgd_engine.cli import main; raise SystemExit(main(['--case','examples/single_case.json','--domain','pccp']))"
+        continue-on-error: false

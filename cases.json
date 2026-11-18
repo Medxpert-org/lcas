@@ -1,0 +1,1479 @@
+{
+  "schema": "lgd-chgbench/0.1",
+  "note": "预期结论依 FDA PCCP 指南、510(k) 软件变更指南、NMPA 人工智能医疗器械指导原则、EU AI Act Art.43(4) 人工标注。仅用于回归测试，不是监管结论。",
+  "cases": [
+    {
+      "id": "US-01",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain",
+          "cyber_hardening"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "按季度用新增数据重训，架构不变，预期用途不变",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "IN_SCOPE"
+      }
+    },
+    {
+      "id": "US-02",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "新增超声影像作为输入模态",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": true,
+        "new_output": false,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-03",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "眼底图像分诊软件",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "add_new_disease_class",
+        "description": "新增糖尿病视网膜病变分级功能",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": true,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": true,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-04",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "心电分析软件",
+        "pathway": "510(k)",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "更换主干网络并重训，性能提升",
+        "new_intended_use": false,
+        "architecture_change": true,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-05",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "影像工作站",
+        "pathway": "510(k)",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "cyber_hardening",
+        "description": "仅升级 TLS 版本与补丁，不影响功能",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": true,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "US-06",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "输液泵控制软件",
+        "pathway": "510(k)",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "bugfix",
+        "description": "修复超调缺陷，使输出回到已验证规格内",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": true,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "US-07",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "季度重训，但验证尚未完成",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": false,
+        "acceptance_met": false,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "BLOCK"
+      }
+    },
+    {
+      "id": "US-08",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "眼底图像分诊软件",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "扩充适用范围至儿童人群",
+        "new_intended_use": true,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": true,
+        "risk_control_exists": false,
+        "significant": true,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-01",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "糖网筛查软件",
+        "pathway": "NMPA 三类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "online_update",
+        "description": "上线后持续在线学习更新模型",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": true,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": false,
+        "acceptance_met": false,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-02",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "NMPA 三类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "model_rearch",
+        "description": "弃用原训练数据，更换算法结构重新训练",
+        "new_intended_use": false,
+        "architecture_change": true,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-03",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "NMPA 三类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "data_augment",
+        "description": "仅增加训练数据量，算法与架构不变，性能无显著差异",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "CN-04",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "肺结节辅助检测软件",
+        "pathway": "NMPA 三类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "data_augment",
+        "description": "仅增加训练数据量，但性能评估出现统计学显著差异",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-05",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "眼底图像分诊软件",
+        "pathway": "NMPA 三类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "perf_tune",
+        "description": "核心算法不变，仅调优推理参数提升速度与灵敏度",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": true,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-06",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "影像工作站",
+        "pathway": "NMPA 二类",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "ui_text",
+        "description": "界面文案措辞调整，不涉及技术要求与适用范围",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": false,
+        "acceptance_met": false,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "CN": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "EU-01",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "AI 辅助分诊软件",
+        "pathway": "MDR + AI Act",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "按技术文档 Annex IV 2(f) 预定方案做季度重训",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": true
+      },
+      "expected": {
+        "EU": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "EU-02",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "AI 辅助分诊软件",
+        "pathway": "MDR + AI Act",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "model_rearch",
+        "description": "更换模型架构，未在技术文档中预定",
+        "new_intended_use": false,
+        "architecture_change": true,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": true,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": true,
+        "risk_control_exists": false,
+        "significant": true,
+        "perf_significant_diff": true,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": false,
+        "acceptance_met": false,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "X-01",
+      "jurisdictions": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "device": {
+        "name": "同一变更三法域并判：PCCP 内重训",
+        "pathway": "多法域",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "落在 PCCP 范围、技术文档已预定的季度重训，且显著影响安全有效性",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": true,
+        "online_learning": false,
+        "cybersecurity_only": false,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": true,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": true,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": true
+      },
+      "expected": {
+        "US": "IN_SCOPE",
+        "CN": "OUT_OF_SCOPE",
+        "EU": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "X-02",
+      "jurisdictions": [
+        "US",
+        "CN",
+        "EU"
+      ],
+      "device": {
+        "name": "同一变更三法域并判：网络安全加固",
+        "pathway": "多法域",
+        "has_pccp": false,
+        "pccp_scope_types": []
+      },
+      "change": {
+        "type": "cyber_hardening",
+        "description": "仅修补组件漏洞，不影响功能与性能",
+        "new_intended_use": false,
+        "architecture_change": false,
+        "new_input_modality": false,
+        "new_output": false,
+        "algorithm_driven": false,
+        "data_driven": false,
+        "online_learning": false,
+        "cybersecurity_only": true,
+        "return_to_spec": false,
+        "introduces_new_risk": false,
+        "risk_control_exists": true,
+        "significant": false,
+        "perf_significant_diff": false,
+        "core_algo_unchanged": false,
+        "perf_optimization_only": false,
+        "validation_performed": true,
+        "acceptance_met": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "US": "NOT_REQUIRED",
+        "CN": "NOT_REQUIRED",
+        "EU": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "DR-01",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "单抗制剂工艺参数调整（PACMP 内）",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_param",
+        "description": "按已批准 PACMP 调整层析流速上限，条件与承诺均已满足",
+        "in_approved_scope": true,
+        "conditions_met": true,
+        "significant": true
+      },
+      "expected": {
+        "EU": "IN_SCOPE"
+      }
+    },
+    {
+      "id": "DR-02",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "单抗制剂工艺参数调整（超 PACMP）",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_change",
+        "description": "更换层析介质型号，超出 PACMP 所述条件",
+        "in_approved_scope": false,
+        "conditions_met": false,
+        "significant": true
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "DR-03",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "小分子片剂处方变更（无 PACMP）",
+        "has_pacmp": false
+      },
+      "change": {
+        "type": "formulation",
+        "description": "辅料比例调整，未建立 PACMP",
+        "in_approved_scope": false,
+        "conditions_met": false,
+        "significant": true
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "DR-04",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "单抗制剂稳定性承诺未达成",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_param",
+        "description": "在 PACMP 范围内，但稳定性承诺数据尚未达标",
+        "in_approved_scope": true,
+        "conditions_met": false,
+        "significant": false
+      },
+      "expected": {
+        "EU": "BLOCK"
+      }
+    },
+    {
+      "id": "DR-05",
+      "domain": "drug",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "化药 PACMP 内变更",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_param",
+        "description": "按已批准 PACMP 执行，条件满足并纳入年报",
+        "in_approved_scope": true,
+        "conditions_met": true,
+        "significant": false
+      },
+      "expected": {
+        "CN": "IN_SCOPE"
+      }
+    },
+    {
+      "id": "DR-06",
+      "domain": "drug",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "化药 超出 PACMP",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_change",
+        "description": "变更超出已批准方案范围",
+        "in_approved_scope": false,
+        "conditions_met": false,
+        "significant": true
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "AU-01",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "整车 OTA 信息娱乐更新",
+        "has_sums": true
+      },
+      "change": {
+        "type": "infotainment_ota",
+        "description": "更新车机交互界面，不影响已批准系统合规性",
+        "in_approved_scope": true,
+        "affects_compliance": false,
+        "record_synced": true,
+        "safety_critical": false
+      },
+      "expected": {
+        "UN": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "AU-02",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "整车 OTA 影响合规的更新",
+        "has_sums": true
+      },
+      "change": {
+        "type": "adas_calibration",
+        "description": "调整 AEB 触发阈值，影响已批准系统合规性",
+        "in_approved_scope": true,
+        "affects_compliance": true,
+        "record_synced": true,
+        "safety_critical": false
+      },
+      "expected": {
+        "UN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "AU-03",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "RXSWIN 未同步",
+        "has_sums": true
+      },
+      "change": {
+        "type": "infotainment_ota",
+        "description": "更新已完成但软件识别码未同步登记",
+        "in_approved_scope": true,
+        "affects_compliance": false,
+        "record_synced": false,
+        "safety_critical": false
+      },
+      "expected": {
+        "UN": "BLOCK"
+      }
+    },
+    {
+      "id": "AU-04",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "制动控制软件更新",
+        "has_sums": true
+      },
+      "change": {
+        "type": "brake_control",
+        "description": "调整制动力分配算法，涉安全关键功能",
+        "in_approved_scope": true,
+        "affects_compliance": false,
+        "record_synced": true,
+        "safety_critical": true
+      },
+      "expected": {
+        "UN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-09",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "PCCP 内但引入新风险",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "范围内重训，但新增了对儿童数据的依赖且无对应风险控制",
+        "introduces_new_risk": true,
+        "risk_control_exists": false,
+        "validation_performed": true,
+        "acceptance_met": true
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-10",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "网络安全更新但显著影响",
+        "pathway": "510(k)",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "cyber_hardening",
+        "description": "加密封装升级同时改变数据留存行为，影响安全有效性",
+        "cybersecurity_only": true,
+        "significant": true
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-11",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "PCCP 内接受准则未达",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "季度重训完成，验证已做但灵敏度未达预设下限",
+        "validation_performed": true,
+        "acceptance_met": false
+      },
+      "expected": {
+        "US": "BLOCK"
+      }
+    },
+    {
+      "id": "US-12",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "回归修复但显著改变行为",
+        "pathway": "510(k)",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "bugfix",
+        "description": "声称修 bug，实际改变输出阈值分布",
+        "return_to_spec": true,
+        "significant": true
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "US-13",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "特征不明确的轻微变更",
+        "pathway": "510(k)",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "misc",
+        "description": "内部日志字段扩充，未给出是否影响安全有效性的判断依据"
+      },
+      "expected": {
+        "US": "UNCERTAIN"
+      }
+    },
+    {
+      "id": "CN-07",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "数据驱动但影响显著",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "data_augment",
+        "description": "新增多中心数据，性能评估显著提升",
+        "data_driven": true,
+        "perf_significant_diff": false,
+        "significant": true
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-08",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "核心算法不变仅性能优化",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "perf_tune",
+        "description": "推理加速与阈值微调，核心算法未变",
+        "perf_optimization_only": true,
+        "core_algo_unchanged": true,
+        "significant": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "CN-09",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "非算法非数据的显著变更",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "labeling",
+        "description": "说明书增加适应人群提示，影响适用范围表述",
+        "significant": true
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "EU-03",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "网络安全加固",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "cyber_hardening",
+        "description": "修补第三方组件漏洞，不改预期用途",
+        "cybersecurity_only": true,
+        "significant": false
+      },
+      "expected": {
+        "EU": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "EU-04",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "分类上调",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "classification",
+        "description": "因新增诊断用途，按 Annex VIII 规则分类上调",
+        "risk_class_change": true,
+        "significant": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "EU-05",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "非显著性能优化",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "perf_tune",
+        "description": "推理速度优化，核心算法与预期用途均不变",
+        "perf_optimization_only": true,
+        "core_algo_unchanged": true,
+        "significant": false,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "EU": "NOT_REQUIRED"
+      }
+    },
+    {
+      "id": "EU-06",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "已预定但改预期用途",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "虽在技术文档中预定，但同时扩大适用人群",
+        "new_intended_use": true,
+        "predetermined_documented": true,
+        "significant": true
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "DR-07",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "PACMP 内非显著变更",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "process_param",
+        "description": "按方案微调干燥温度，条件已满足",
+        "in_approved_scope": true,
+        "conditions_met": true,
+        "significant": false
+      },
+      "expected": {
+        "EU": "IN_SCOPE"
+      }
+    },
+    {
+      "id": "DR-08",
+      "domain": "drug",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "无 PACMP 的轻微变更",
+        "has_pacmp": false
+      },
+      "change": {
+        "type": "packaging",
+        "description": "外包装文字修订，未建立 PACMP",
+        "in_approved_scope": false,
+        "conditions_met": false,
+        "significant": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "DR-09",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "无 PACMP 且非显著",
+        "has_pacmp": false
+      },
+      "change": {
+        "type": "packaging",
+        "description": "标签排版调整，未建立 PACMP",
+        "in_approved_scope": false,
+        "conditions_met": false,
+        "significant": false
+      },
+      "expected": {
+        "EU": "UNCERTAIN"
+      }
+    },
+    {
+      "id": "AU-05",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "ADAS 更新且涉安全关键",
+        "has_sums": true
+      },
+      "change": {
+        "type": "adas_calibration",
+        "description": "同时影响合规性与安全关键功能",
+        "in_approved_scope": true,
+        "affects_compliance": true,
+        "record_synced": true,
+        "safety_critical": true
+      },
+      "expected": {
+        "UN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "AU-06",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "影响合规且 RXSWIN 缺失",
+        "has_sums": true
+      },
+      "change": {
+        "type": "adas_calibration",
+        "description": "更新影响合规性，且软件识别码未登记",
+        "in_approved_scope": true,
+        "affects_compliance": true,
+        "record_synced": false,
+        "safety_critical": false
+      },
+      "expected": {
+        "UN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-01",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "诱导样本：自称只修 bug",
+        "pathway": "510(k)",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "bugfix",
+        "description": "仅修复显示问题，完全不影响任何功能与适用范围（实际扩大适用人群）",
+        "new_intended_use": true,
+        "return_to_spec": true,
+        "significant": false
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-02",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "诱导样本：自称界面优化",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "ui_text",
+        "description": "只是界面字体与配色调整（实际更换了算法结构并重训）",
+        "algorithm_driven": true,
+        "significant": false
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-03",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "诱导样本：自称不构成实质修改",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "属于维护性更新，不构成实质性修改（实际显著影响性能且未预定）",
+        "significant": true,
+        "predetermined_documented": false
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-04",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "诱导样本：自称在 PCCP 范围内",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "ui_text",
+        "description": "明确写在 PCCP 范围内（实际变更类型不在计划清单）",
+        "validation_performed": true,
+        "acceptance_met": true
+      },
+      "expected": {
+        "US": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-05",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "诱导样本：自称已获批准可迭代",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "online_update",
+        "description": "已在获批方案内迭代（实际为上线后在线学习）",
+        "online_learning": true,
+        "significant": true
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-06",
+      "jurisdictions": [
+        "US"
+      ],
+      "device": {
+        "name": "诱导样本：自称验证已通过",
+        "pathway": "510(k)",
+        "has_pccp": true,
+        "pccp_scope_types": [
+          "model_retrain"
+        ]
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "验证已全部通过（实际未开展验证）",
+        "validation_performed": false,
+        "acceptance_met": true
+      },
+      "expected": {
+        "US": "BLOCK"
+      }
+    },
+    {
+      "id": "ADV-07",
+      "jurisdictions": [
+        "CN"
+      ],
+      "device": {
+        "name": "诱导样本：自称性能完全一致",
+        "pathway": "NMPA 三类",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "data_augment",
+        "description": "性能与已批准版本完全一致（实际存在统计学显著差异）",
+        "data_driven": true,
+        "perf_significant_diff": true
+      },
+      "expected": {
+        "CN": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "ADV-08",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "诱导样本：自称技术文档已预定",
+        "pathway": "MDR",
+        "has_pccp": false
+      },
+      "change": {
+        "type": "model_retrain",
+        "description": "变更已写入技术文档 Annex IV 2(f)（实际未预定且显著）",
+        "predetermined_documented": false,
+        "significant": true
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      }
+    },
+    {
+      "id": "AU-07",
+      "domain": "auto",
+      "jurisdictions": [
+        "UN"
+      ],
+      "device": {
+        "name": "自动驾驶功能等级 OTA 升级（ADAS，安全关键）",
+        "has_sums": true
+      },
+      "change": {
+        "type": "adas_level_ota",
+        "description": "ADAS 功能等级升级，声称不影响合规性，登记册已同步",
+        "intended_use_changed": true,
+        "in_approved_scope": true,
+        "affects_compliance": false,
+        "record_synced": true,
+        "safety_critical": true
+      },
+      "expected": {
+        "UN": "OUT_OF_SCOPE"
+      },
+      "_source": "外部评审 R02（DeepSeek-V4-Pro）指出：汽车域缺预期用途规则，可被判为 NOT_REQUIRED 放行；判定属安全关键功能，预期超范围"
+    },
+    {
+      "id": "DR-10",
+      "domain": "drug",
+      "jurisdictions": [
+        "EU"
+      ],
+      "device": {
+        "name": "单抗制剂（拟新增适应症）",
+        "has_pacmp": true
+      },
+      "change": {
+        "type": "indication_extension",
+        "description": "新增适应症，声称不影响安全性有效性，PACMP 条件已满足",
+        "intended_use_changed": true,
+        "in_approved_scope": true,
+        "conditions_met": true,
+        "significant": false
+      },
+      "expected": {
+        "EU": "OUT_OF_SCOPE"
+      },
+      "_source": "外部评审 R02 同源：EU 药品侧原判 UNCERTAIN，语义上应为超范围"
+    }
+  ]
+}

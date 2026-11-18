@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Regression + evidence packs
+        run: python bench.py
+
+      - name: Exhaustive invariants (all three domains)
+        run: python fuzz.py
+
+      - name: LCAS conformance (L2 self-consistency)
+        run: python release/conformance.py --impl judge.py --check-evidence
+
+      - name: Determinism
+        run: |
+          python -c "from judge import judge; import json; c=json.load(open('examples/single_case.json',encoding='utf-8')); print(json.dumps(judge(c),ensure_ascii=False,sort_keys=True))" > a.txt
+          python -c "from judge import judge; import json; c=json.load(open('examples/single_case.json',encoding='utf-8')); print(json.dumps(judge(c),ensure_ascii=False,sort_keys=True))" > b.txt
+          diff a.txt b.txt
