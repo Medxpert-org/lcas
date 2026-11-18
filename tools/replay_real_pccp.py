@@ -89,6 +89,7 @@ CASES = [
             "verification_evidence": "软件验证与确认按 IEC 62304 执行",
         },
         "jurisdictions": ["US"],
+        "submission_purpose": "pccp_authorization",
         "quotes": {
             "purpose": "The purpose of this 510(k) submission is to obtain FDA's review and authorization of a Predetermined Change Control Plan (PCCP) for the subject device.",
             "actual_change": "The only additional difference from the predicate device is a minor software update in which third-party libraries were updated to address known vulnerabilities",
@@ -109,6 +110,7 @@ def main():
             "k_number": c["source"]["k_number"],
             "verdict": v["verdict"],
             "route": v["route"],
+            "context": v.get("context"),
             "rule_ids": [f["rule_id"] for f in v["findings"]],
             "n90_elements": {e: [x["rule_id"] for x in out["n90"]["elements"][e]]
                              for e in ("description", "plan", "impact")},
