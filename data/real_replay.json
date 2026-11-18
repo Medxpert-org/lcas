@@ -7,6 +7,7 @@
       "k_number": "K252041",
       "verdict": "IN_SCOPE",
       "route": "PASS",
+      "context": null,
       "rule_ids": [
         "US-PCCP-OK"
       ],
@@ -39,6 +40,7 @@
       "k_number": "K252844",
       "verdict": "OUT_OF_SCOPE",
       "route": "BLOCK",
+      "context": "本次提交目的为取得 PCCP 授权；裁决只回答'该改动是否需要新提交'，不判断'该 PCCP 是否已获授权'。",
       "rule_ids": [
         "US-PCCP-R2",
         "US-SW-Q1"

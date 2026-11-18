@@ -231,12 +231,21 @@ def judge_one(case, jur):
     else:
         conf = "low"
 
+    # 语境标注（2026-11-18，真实材料回放推出）：本判定回答的是"这次改动是否需要新提交"。
+    # 当提交本身以取得 PCCP 授权为目的（REAL-02 / K252844）时，OUT_OF_SCOPE 意为"需提交"，
+    # 而"已提交并获授权"是另一个命题。标注不得改写裁决，只防止误读。
+    context = None
+    if case.get("submission_purpose") == "pccp_authorization":
+        context = ("本次提交目的为取得 PCCP 授权；裁决只回答'该改动是否需要新提交'，"
+                   "不判断'该 PCCP 是否已获授权'。")
+
     return {
         "jurisdiction": jur,
         "verdict": verdict,
         "route": route,
         "confidence": conf,
         "findings": findings,
+        "context": context,
     }
 
 
