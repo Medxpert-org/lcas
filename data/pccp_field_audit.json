@@ -1,0 +1,46 @@
+{
+  "audit": "PCCP-Authorized-field",
+  "audited_at_utc": "2026-11-18T09:35:00Z",
+  "auditor": "lcas (Medxpert-org)",
+  "hypothesis": "FDA Devices@FDA 的 Predetermined Change Control Plan Authorized 字段，可用来统计 PCCP 采用率",
+  "method": "对设备名含 (with PCCP) 的 510(k) 记录，逐条比对『字段值』与『summary PDF 文本』；两处独立取数，不做推断",
+  "records": [
+    {
+      "k_number": "K252041",
+      "device": "Fibresolve (with PCCP)",
+      "applicant": "Imvaria, Inc.",
+      "decision_date": "2025-11-07",
+      "product_code": "QWO",
+      "field_value": "Yes",
+      "field_source": "https://www.accessdata.fda.gov/scripts/Cdrh/cfdocs/cfpmn/pmn.cfm?ID=k252041",
+      "summary_url": null,
+      "summary_evidence": "第三方站（Innolitics）转述该器械含 PCCP，允许后续改模型架构/训练数据/输入类型",
+      "agreement": "field_says_yes_and_external_description_agrees"
+    },
+    {
+      "k_number": "K252844",
+      "device": "Tyto Insights for Wheeze Detection (with PCCP)",
+      "applicant": "Tyto Care, Ltd.",
+      "decision_date": "2026-06-02",
+      "product_code": "PHZ",
+      "field_value": "No",
+      "field_source": "https://www.accessdata.fda.gov/SCRIPTS/cdrh/devicesatfda/index.cfm?db=pmn&id=K252844",
+      "summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252844.pdf",
+      "summary_evidence": "summary 原文：『The purpose of this 510(k) submission is to obtain FDA's review and authorization of a Predetermined Change Control Plan (PCCP)』；差异表『PCCP | Includes PCCP (submitted for FDA review in this 510(k))』",
+      "agreement": "CONTRADICTION",
+      "note": "字段 = No，但 summary 明确写明本次提交的目的就是取得 PCCP 授权"
+    }
+  ],
+  "finding": {
+    "checked": 2,
+    "contradictions": 1,
+    "statement": "在抽查的 2 台『名称含 PCCP』的 510(k) 中，有 1 台的 FDA 字段为 No 而 summary 明确为 PCCP 授权提交；因此该字段不足以支撑采用率统计，基于它的任何比例都会偏低。",
+    "do_not_claim": "不得用该字段计算 PCCP 采用率；不得据此判断某器械是否带 PCCP"
+  },
+  "channel": {
+    "shell_access_to_accessdata": "blocked (404)",
+    "agent_web_fetch_to_accessdata": "ok",
+    "pdf_fetchable_via_web_fetch": true,
+    "example_pdf": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K252844.pdf"
+  }
+}
