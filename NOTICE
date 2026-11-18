@@ -1,0 +1,30 @@
+LCAS — Change Adjudication Spec & Reference Implementation
+Copyright (c) 2026 Zhao, X. (Independent Researcher)
+
+Licensed under the Apache License, Version 2.0 — see LICENSE in this directory.
+
+Upstream project: lgd-engine (Apache-2.0), into which this implementation is
+integrated as the `change-adjudication` domain. See NOTICE-upstream.txt.
+
+Third-party regulatory material
+-------------------------------
+This package references clause numbers and summaries from publicly issued
+documents, including:
+  - FDA guidance: Predetermined Change Control Plans for ML-Enabled Devices
+  - 21 CFR 807.81(a)(3)
+  - ICH Q12 (Post-approval Change Management Protocol, chapter 4)
+  - UN Regulation No. 156 (SUMS / RXSWIN)
+  - Regulation (EU) 2024/1701; EU AI Act Article 43(4); EU MDR
+  - NMPA announcements 2025/63, 2025/119, 2023/108; SAMR Order No. 47
+  - IMDRF N90 (Essential Principles and Content of PCCPs)
+
+Only clause identifiers, short paraphrases and links are included. No regulatory
+text is reproduced in full. Copyright in those documents remains with the issuing
+authorities. Clause anchors were audited against primary sources; see ANCHORS.md,
+which also records two citations that were downgraded for insufficient support.
+
+No warranty
+-----------
+The output of this software is a decision recommendation, not a regulatory
+conclusion. Clinical, legal and regulatory responsibility remains with the
+manufacturer / marketing authorization holder.
