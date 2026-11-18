@@ -17,6 +17,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Contract invariants (tests/)
+        run: python -m unittest discover tests -v
+
       - name: Regression + evidence packs
         run: python bench.py
 

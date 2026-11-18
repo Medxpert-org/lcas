@@ -222,7 +222,35 @@ def judge_one(case, jur):
     }
 
 
+REQUIRED_INPUT = ("device", "change", "jurisdictions")
+
+
+def missing_input(case):
+    """SPEC §2：缺必填字段必须 fail-closed，不得用默认值猜。"""
+    return [k for k in REQUIRED_INPUT if not isinstance(case.get(k), (dict, list))]
+
+
+def _fail_closed(case, missing):
+    jur_list = case.get("jurisdictions") or ["US"]
+    results = {}
+    for jur in jur_list:
+        results[jur] = {
+            "jurisdiction": jur, "verdict": "UNCERTAIN", "route": "REVIEW", "confidence": "low",
+            "findings": [{"rule_id": "INPUT-MISSING", "effect": "UNCERTAIN",
+                          "article": "LCAS-0.1 §2（必填字段缺失 → 无法判定）",
+                          "desc": "缺少必填输入：" + "、".join(missing)}],
+        }
+    return {
+        "case_id": case.get("id"), "device": "", "results": results,
+        "divergence": {"divergent": False, "note": "输入不全，未进入规则判定"},
+        "disclaimer": "本输出为决策建议，非合规结论；采信与法律责任在注册人。",
+    }
+
+
 def judge(case):
+    missing = missing_input(case)
+    if missing:
+        return _fail_closed(case, missing)
     res = {"case_id": case.get("id"), "device": _dv(case).get("name", ""),
            "results": {}}
     for jur in case.get("jurisdictions", []):

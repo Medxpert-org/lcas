@@ -33,9 +33,13 @@ same computation across four regimes usually treated as unrelated:
 Shared structure: **input = change + approved scope; output = in-scope / out-of-scope /
 undeterminable, plus the clause that decides it and an offline-recomputable evidence pack.**
 
-## Four verdicts, never a score
+## Five verdicts, never a score
 
-`IN_SCOPE` · `NOT_REQUIRED` · `OUT_OF_SCOPE` · `UNCERTAIN`
+`IN_SCOPE` · `NOT_REQUIRED` · `OUT_OF_SCOPE` · `BLOCK` · `UNCERTAIN`
+
+`BLOCK` is the only one that changes *when* rather than *whether*: the change is inside the
+approved envelope, but a prerequisite (validation, commitment, record sync) is unmet. It
+routes to BLOCK, not to a new submission.
 
 Precedence is fixed and monotone: `OUT_OF_SCOPE > BLOCK > UNCERTAIN > NOT_REQUIRED > IN_SCOPE`.
 No voting, no averaging, no "most rules agree, so pass".
@@ -57,6 +61,7 @@ Every number above is produced by a script in this repo. Run it yourself:
 
 ```bash
 python bench.py                                                       # regression + evidence packs
+python -m unittest discover tests -v                                   # contract invariants (fail-closed, traceability)
 python fuzz.py                                                        # exhaustive invariants
 python release/conformance.py --impl judge.py --check-evidence        # LCAS L2 self-consistency
 ```
